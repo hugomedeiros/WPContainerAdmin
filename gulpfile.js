@@ -85,11 +85,11 @@ gulp.task('watch', function() {
   // Watch site-js files
   gulp.watch('./assets/js/scripts/*.js', ['site-js']);
 
-	
+
 
 });
 
 // Run styles, site-js and foundation-js
 gulp.task('default', function() {
-  gulp.start('styles', 'site-js', );
+  gulp.start('styles', 'site-js');
 });

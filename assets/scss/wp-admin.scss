@@ -1,0 +1,79 @@
+@import "variables";
+
+$sidebarSize: 200px;
+$sidebarGutter: 20px;
+$barAside: 80px;
+
+
+body{
+	background: $lightPurple;
+}
+#wp-content-editor-tools{
+	background: $lightPurple;
+}
+//WRAP
+#wpwrap{
+
+}
+
+//SIDEBAR
+#adminmenumain{
+
+	// BASE MENU
+	#adminmenuback, #adminmenuwrap{
+		width: $sidebarSize;
+		padding: $sidebarGutter;
+		margin-left: $barAside;
+	}
+
+	#adminmenu .wp-submenu.wp-submenu-wrap{
+		width: calc($sidebarSize - $sidebarGutter);
+	}
+	// BACKGROUND MENU
+	#adminmenu, #adminmenuback, #adminmenuwrap{
+		background: $darkBlue;
+
+	}
+
+	//BACKGROUND SUBMENU
+	#adminmenu .wp-submenu.wp-submenu-wrap{
+		background: lighten($darkBlue,10%);
+		width: $sidebarSize;
+	}
+
+	#adminmenu{
+		width: $sidebarSize;
+	}
+
+}
+
+//CONTENT
+#wpcontent, #wpfooter{
+
+	margin-left: $sidebarSize + ( $sidebarGutter * 2 ) + $barAside;
+
+
+	// ADMIN TOP BAR;
+	#wpadminbar{
+		width: $BarAside;
+		height: 100vh;
+		min-width: inherit;
+		background: $attentionBox;
+
+
+		.quicklinks{
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: column;
+			justify-content: space-between;
+			height: 100vh;
+
+			ul>li a{
+				overflow: hidden;
+				width: $barAside
+			}
+		}
+	}
+
+
+}

@@ -76,3 +76,13 @@ function wpcat_my_welcome_panel() {
 }
 
 add_action( 'welcome_panel', 'wpcat_my_welcome_panel' );
+
+
+
+
+function customAdmin() {
+    $url = get_settings('siteurl');
+    $url = $url . '/wp-content/plugins/wp-container-admin/assets/css/wp-admin.min.css';
+    echo '<link rel="stylesheet" type="text/css" href="' . $url . '" />';
+}
+add_action('admin_head', 'customAdmin');
